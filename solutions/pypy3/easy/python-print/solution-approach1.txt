@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-09-28, 09:26 p.m.
+# Technique   range-iteration-with-end-parameter
+# Time        O(n)
+# Space       O(1)
+# Insight     The code iterates through the range from one to n inclusive and prints each integer sequentially without a trailing newline or space separator.
+# Interview   Before: "I would convert the integer to a string and join them." After: "By using the end parameter in the print function, I avoid string conversion and concatenation, achieving O(n) time complexity while maintaining O(1) space complexity for any integer n."
+# Pitfalls    (1) Using the default print end parameter adds a newline character after every integer, violating the requirement to print the sequence as a single string.  (2) Using range(n) instead of range(1, n + 1) excludes the integer n from the output sequence.
 # ──────────────────────────────────────────────────
 
 if __name__ == '__main__':
