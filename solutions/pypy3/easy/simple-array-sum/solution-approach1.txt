@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-09-29, 07:12 p.m.
+# Technique   linear-summation-iteration
+# Time        O(n)
+# Space       O(1)
+# Insight     The function computes the total sum by iterating through each integer in the input array and accumulating the values into a single variable.
+# Interview   Before: "I would use a loop to add each element to a running total." After: "The implementation iterates through the array once, resulting in O(n) time complexity and O(1) auxiliary space, which is optimal for calculating the sum of n elements."
+# Pitfalls    (1) Failing to initialize the accumulator variable to zero before starting the iteration.  (2) Assuming the input array might be empty without verifying if the sum logic handles an empty list correctly.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
