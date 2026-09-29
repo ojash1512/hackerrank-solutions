@@ -7,6 +7,12 @@
 # Language    pypy3
 # Status      Accepted
 # Submitted   2026-09-29, 06:52 p.m.
+# Technique   list-slicing-concatenation
+# Time        O(n)
+# Space       O(n)
+# Insight     The function performs a left rotation by partitioning the array at index d and concatenating the suffix starting at d with the prefix ending at d.
+# Interview   Before: "I could use a loop to shift elements one by one." After: "Using list slicing is more idiomatic in Python, achieving O(n) time and space complexity while correctly handling the circular shift by wrapping the prefix to the end."
+# Pitfalls    (1) Failing to handle cases where d is greater than the array length, which requires using the modulo operator to ensure the rotation index remains valid.  (2) Assuming the input array is modified in-place, whereas this slicing approach returns a new array.
 # ──────────────────────────────────────────────────
 
 #!/bin/python3
